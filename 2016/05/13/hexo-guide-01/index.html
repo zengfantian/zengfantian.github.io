@@ -8,26 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Hexo是一个开源的静态博客生成器，用node.js开发，作者是台湾大学生tommy351。
 为什么是博客
-对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。
-为什么是静态博客
-很多人选择在虚拟主机或vps上面搭建动态博客。但是这些主机商通常“免费的不稳">
+对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 入门指南（一） - 简介 & 准备">
 <meta property="og:url" content="http://zengfantian.github.io/2016/05/13/hexo-guide-01/index.html">
 <meta property="og:site_name" content="Ajava攻城师的博客">
 <meta property="og:description" content="Hexo是一个开源的静态博客生成器，用node.js开发，作者是台湾大学生tommy351。
 为什么是博客
-对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。
-为什么是静态博客
-很多人选择在虚拟主机或vps上面搭建动态博客。但是这些主机商通常“免费的不稳">
-<meta property="og:updated_time" content="2016-05-13T09:40:17.979Z">
+对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。">
+<meta property="og:updated_time" content="2016-05-13T11:05:38.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 入门指南（一） - 简介 & 准备">
 <meta name="twitter:description" content="Hexo是一个开源的静态博客生成器，用node.js开发，作者是台湾大学生tommy351。
 为什么是博客
-对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。
-为什么是静态博客
-很多人选择在虚拟主机或vps上面搭建动态博客。但是这些主机商通常“免费的不稳">
+对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -100,6 +94,10 @@
 				        
 							<li><a href="/archives">所有文章</a></li>
 				        
+							<li><a href="/">相册</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
 						</ul>
 					</nav>
 					<nav class="header-nav">
@@ -109,7 +107,7 @@
 					        
 								<a class="weibo" target="_blank" href="http://t.qq.com/my100fly" title="weibo">weibo</a>
 					        
-								<a class="mail" target="_blank" href="/zftlive@163.com" title="mail">mail</a>
+								<a class="mail" target="_blank" href="mailto:zftlive@163.com" title="mail">mail</a>
 					        
 						</div>
 					</nav>
@@ -118,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/node-js/" style="font-size: 20px;">node.js</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -164,6 +162,10 @@
 		        
 					<li><a href="/archives">所有文章</a></li>
 		        
+					<li><a href="/">相册</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
 		        <div class="clearfix"></div>
 				</ul>
 			</nav>
@@ -174,7 +176,7 @@
 			        
 						<a class="weibo" target="_blank" href="http://t.qq.com/my100fly" title="weibo">weibo</a>
 			        
-						<a class="mail" target="_blank" href="/zftlive@163.com" title="mail">mail</a>
+						<a class="mail" target="_blank" href="mailto:zftlive@163.com" title="mail">mail</a>
 			        
 				</div>
 			</nav>
@@ -207,7 +209,15 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+	</div>
+
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Hexo指南/">Hexo指南</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -218,11 +228,11 @@
         <p>Hexo是一个开源的静态博客生成器，用node.js开发，作者是台湾大学生tommy351。</p>
 <p>为什么是博客</p>
 <p>对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。</p>
+<a id="more"></a>
 <p>为什么是静态博客</p>
 <p>很多人选择在虚拟主机或vps上面搭建动态博客。但是这些主机商通常“免费的不稳定，稳定的不免费”。前一段时间，我观察了我的个人博客友链上面的几个站点，一部分在十几天之后就销声匿迹了。独立博客如此麻烦的维护工作，能不能减轻一些呢？正如阮一峰前辈所说，blogger分为三个阶段。最开始，是门户博客。之后，是独立博客。最后，觉得独立博客自己管理起来费劲，便找个别人来管的空间，自己负责写就好。如果我们能够找到这样的空间，在自己保留最大控制权前提下，由别人托管，会省去不少事情。</p>
 <p>静态博客编译之后是纯html页面，优点就是支持它的环境十分好找，例如github、gitcafe、七牛云存储等站点都支持静态页面托管，自然是我们的首选了。由于github page在国内访问较慢，这篇文章用gitcafe做示范。gitcafe是天朝本地化的github，同样提供展示页和域名绑定功能，不需要备案，就是爽。</p>
 <p>但是静态博客并非没有缺点。动态博客更新文章时，脚本是不变的，只需要更新数据库。静态博客要频繁改动文件，不支持增量式上传的东西，比如ftp，就难于管理。此外，还要十分熟悉git各种命令，才能部署页面。</p>
-<a id="more"></a>
 <p>准备工作</p>
 <p>git<br>node.js<br>markdown编辑器<br>gitcafe<br>域名<br>markdown编辑器是非必须的，只要你熟悉语法，随便一个编辑器来写都不是问题。</p>
 <p>域名也是非必须的，gitcafe pages服务提供免费的二级域名。注册域名的教程这里就不写了。</p>
@@ -252,11 +262,15 @@
     
 <nav id="article-nav">
   
-  
-    <a href="/2016/05/13/say-hexo-to-hello/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo初识</div>
-      <strong class="article-nav-caption">></strong>
+    <a href="/2016/05/13/say-hexo-to-hello/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Hexo初识
+        
+      </div>
     </a>
+  
   
 </nav>
 
