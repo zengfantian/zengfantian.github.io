@@ -4,17 +4,30 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Ajava攻城师的博客</title>
+  <title>Hexo 入门指南（一） - 简介 &amp; 准备 | Ajava攻城师的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="90后、IT男、技术控">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ajava攻城师的博客">
-<meta property="og:url" content="http://zengfantian.github.io/index.html">
+  <meta name="description" content="Hexo是一个开源的静态博客生成器，用node.js开发，作者是台湾大学生tommy351。
+为什么是博客
+对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。
+为什么是静态博客
+很多人选择在虚拟主机或vps上面搭建动态博客。但是这些主机商通常“免费的不稳">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 入门指南（一） - 简介 & 准备">
+<meta property="og:url" content="http://zengfantian.github.io/2016/05/13/hexo-guide-01/index.html">
 <meta property="og:site_name" content="Ajava攻城师的博客">
-<meta property="og:description" content="90后、IT男、技术控">
+<meta property="og:description" content="Hexo是一个开源的静态博客生成器，用node.js开发，作者是台湾大学生tommy351。
+为什么是博客
+对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。
+为什么是静态博客
+很多人选择在虚拟主机或vps上面搭建动态博客。但是这些主机商通常“免费的不稳">
+<meta property="og:updated_time" content="2016-05-13T09:40:17.979Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ajava攻城师的博客">
-<meta name="twitter:description" content="90后、IT男、技术控">
+<meta name="twitter:title" content="Hexo 入门指南（一） - 简介 & 准备">
+<meta name="twitter:description" content="Hexo是一个开源的静态博客生成器，用node.js开发，作者是台湾大学生tommy351。
+为什么是博客
+对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。
+为什么是静态博客
+很多人选择在虚拟主机或vps上面搭建动态博客。但是这些主机商通常“免费的不稳">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -169,9 +182,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-hexo-guide-01" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-hexo-guide-01" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/05/13/hexo-guide-01/" class="article-date">
@@ -187,12 +198,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/13/hexo-guide-01/">Hexo 入门指南（一） - 简介 &amp; 准备</a>
+    <h1 class="article-title" itemprop="name">
+      Hexo 入门指南（一） - 简介 &amp; 准备
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -204,92 +222,93 @@
 <p>很多人选择在虚拟主机或vps上面搭建动态博客。但是这些主机商通常“免费的不稳定，稳定的不免费”。前一段时间，我观察了我的个人博客友链上面的几个站点，一部分在十几天之后就销声匿迹了。独立博客如此麻烦的维护工作，能不能减轻一些呢？正如阮一峰前辈所说，blogger分为三个阶段。最开始，是门户博客。之后，是独立博客。最后，觉得独立博客自己管理起来费劲，便找个别人来管的空间，自己负责写就好。如果我们能够找到这样的空间，在自己保留最大控制权前提下，由别人托管，会省去不少事情。</p>
 <p>静态博客编译之后是纯html页面，优点就是支持它的环境十分好找，例如github、gitcafe、七牛云存储等站点都支持静态页面托管，自然是我们的首选了。由于github page在国内访问较慢，这篇文章用gitcafe做示范。gitcafe是天朝本地化的github，同样提供展示页和域名绑定功能，不需要备案，就是爽。</p>
 <p>但是静态博客并非没有缺点。动态博客更新文章时，脚本是不变的，只需要更新数据库。静态博客要频繁改动文件，不支持增量式上传的东西，比如ftp，就难于管理。此外，还要十分熟悉git各种命令，才能部署页面。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
+<a id="more"></a>
+<p>准备工作</p>
+<p>git<br>node.js<br>markdown编辑器<br>gitcafe<br>域名<br>markdown编辑器是非必须的，只要你熟悉语法，随便一个编辑器来写都不是问题。</p>
+<p>域名也是非必须的，gitcafe pages服务提供免费的二级域名。注册域名的教程这里就不写了。</p>
+<p>安装 git</p>
+<p>git的客户端，本人推荐git-scm。</p>
+<p>linux下面，在bash中键入：</p>
+<p>(Ubuntu, Debian)</p>
+<p>$ sudo apt-get install git<br>(Fedora, Red Hat, CentOS)</p>
+<p>$ sudo yum install git<br>windows或mac下，直接到git-scm官网下载安装。</p>
+<p>安装 node.js</p>
+<p>linux下：</p>
+<p>$ sudo apt-get install nodejs<br>$ sudo apt-get install npm<br>yum同理。</p>
+<p>windows或者mac下，直接到node.js官网下载安装。<br>windows还要设置环境变量，把node.js安装路径写进path里面，用半角分号分隔。</p>
+<p>markdown 编辑器</p>
+<p>windows下推荐markdown pad。</p>
+<p>mac下推荐mou。</p>
+<p>gitcafe</p>
+<p>首先注册一个账号，之后点击查看如何使用pages服务。</p>
+<p>相关网页</p>
+<p>Hexo主页<br>Hexo github 地址<br>git book</p>
 
       
-        <p class="article-more-link">
-          <a  href="/2016/05/13/hexo-guide-01/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-say-hexo-to-hello" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/13/say-hexo-to-hello/" class="article-date">
-  	<time datetime="2016-05-13T03:11:36.917Z" itemprop="datePublished">2016-05-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/13/say-hexo-to-hello/">Hexo初识</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/13/say-hexo-to-hello/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/13/say-hexo-to-hello/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo初识</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
 
 
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="hexo-guide-01" data-title="Hexo 入门指南（一） - 简介 &amp; 准备" data-url="http://zengfantian.github.io/2016/05/13/hexo-guide-01/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jarson7426"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-  
-  
+
+
+
 </div>
       <footer id="footer">
   <div class="outer">
@@ -313,8 +332,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
