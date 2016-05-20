@@ -3,6 +3,31 @@
 
 
     
+    
+  <url>
+    <loc>http://zengfantian.github.io/posts/github/2016-05-13/hexo-guide-01.html</loc>
+    <lastmod>2016-05-14T11:44:04.581Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo 入门指南（一） - 简介 & 准备 -- Hexo是一个开源的静态博客生成器</title>
+        <pubTime>2016-05-13T09:35:19.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Nodejs</tag>
+         
+        <tag>随笔</tag>
+         
+         
+           
+             
+              <breadCrumb title="Github博客" url="http://zengfantian.github.io/categories/github/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://zengfantian.github.io/posts/github/2016-05-13/say-hexo-to-hello.html</loc>
     <lastmod>2016-05-13T12:28:59.038Z</lastmod>
@@ -25,27 +50,7 @@
     </url>
 
     
-  <url>
-    <loc>http://zengfantian.github.io/posts/github/2016-05-13/hexo-guide-01.html</loc>
-    <lastmod>2016-05-13T12:28:55.019Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo 入门指南（一） - 简介 & 准备</title>
-        <pubTime>2016-05-13T09:35:19.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>Nodejs</tag>
-         
-        <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="Github博客" url="http://zengfantian.github.io/categories/github/"/>
-          
-        </display>
-    </data>
-    </url>
-
+    
+    
+    
 </urlset>
