@@ -118,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Nodejs/" style="font-size: 20px;">Nodejs</a> <a href="/tags/nature/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Nodejs/" style="font-size: 20px;">Nodejs</a> <a href="/tags/反编译/" style="font-size: 10px;">反编译</a> <a href="/tags/打包混淆/" style="font-size: 10px;">打包混淆</a> <a href="/tags/nature/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -204,6 +204,70 @@
 
       <div class="body-wrap">
   
+    <article id="post-say-hexo-to-hello" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/github/2016-05-13/say-hexo-to-hello.html" class="article-date">
+  	<time datetime="2016-05-13T09:35:19.000Z" itemprop="datePublished">2016-05-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/github/2016-05-13/say-hexo-to-hello.html">Hexo初识</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nodejs/">Nodejs</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/github/">Github博客</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/posts/github/2016-05-13/say-hexo-to-hello.html#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-hexo-guide-01" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -270,10 +334,10 @@
 
 
   
-    <article id="post-say-hexo-to-hello" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-android-proguard-instruction" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/posts/github/2016-05-13/say-hexo-to-hello.html" class="article-date">
+      <a href="/posts/github/2016-05-13/android-proguard-instruction.html" class="article-date">
   	<time datetime="2016-05-13T09:35:19.000Z" itemprop="datePublished">2016-05-13</time>
 </a>
     </div>
@@ -287,7 +351,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/posts/github/2016-05-13/say-hexo-to-hello.html">Hexo初识</a>
+      <a class="article-title" href="/posts/github/2016-05-13/android-proguard-instruction.html">Android基础混淆配置说明</a>
     </h1>
   
 
@@ -296,7 +360,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+        <h1 id="混淆配置说明"><a href="#混淆配置说明" class="headerlink" title="混淆配置说明"></a>混淆配置说明</h1><p>本文清楚的记录混淆可以适应于哪些元素、分别该如何配置，哪些可以混淆，哪些不需要混淆</p>
+<h2 id="混淆支持的元素"><a href="#混淆支持的元素" class="headerlink" title="混淆支持的元素"></a>混淆支持的元素</h2><p>类名、包名、方法名、类成员属性、字段\变量名</p>
+<h2 id="哪些不能混淆"><a href="#哪些不能混淆" class="headerlink" title="哪些不能混淆"></a>哪些不能混淆</h2><ul>
+<li><p>反射需要用到的元素</p>
+</li>
+<li><p>json需要序列化与反序列化的元素</p>
+</li>
+<li><p>枚举类型元素</p>
+</li>
+<li><p>所有的注解</p>
+</li>
+<li><p>Android四大组件</p>
+</li>
+<li><p>自定义控件</p>
+</li>
+<li><p>R和Application</p>
+</li>
+<li><p>JNI/Native/js调用的方法</p>
+</li>
+<li><p>第三方开源库</p>
+</li>
+</ul>
+<h2 id="常见的混淆配置"><a href="#常见的混淆配置" class="headerlink" title="常见的混淆配置"></a>常见的混淆配置</h2><h3 id="keep"><a href="#keep" class="headerlink" title="-keep"></a>-keep</h3><p>1、保留某个包下面的类以及子包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-keep public class com.droidyue.com.widget.**</span><br></pre></td></tr></table></figure>
+<p>2、保留所有类中使用otto的public方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-keepclassmembers class ** &#123;</span><br><span class="line">    @com.squareup.otto.Subscribe public *;</span><br><span class="line">    @com.squareup.otto.Produce public *;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3、保留Contants类的BOOK_NAME属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-keepclassmembers class com.example.admin.proguardsample.Constants &#123;</span><br><span class="line">     public static java.lang.String BOOK_NAME;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="dontwarn"><a href="#dontwarn" class="headerlink" title="-dontwarn"></a>-dontwarn</h3><p>dontwarn是一个和keep可以说是形影不离,尤其是处理引入的library时.</p>
+<p>引入的library可能存在一些无法找到的引用和其他问题,在build时可能会发出警告,如果我们不进行处理,通常会导致build中止.因此为了保证build继续,我们需要使用dontwarn处理这些我们无法解决的library的警告.</p>
+<p>比如关闭Twitter sdk的警告：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-dontwarn com.twitter.sdk.**</span><br></pre></td></tr></table></figure>
+<h2 id="混淆堆栈错误还原"><a href="#混淆堆栈错误还原" class="headerlink" title="混淆堆栈错误还原"></a>混淆堆栈错误还原</h2><h3 id="retrace脚本"><a href="#retrace脚本" class="headerlink" title="retrace脚本"></a>retrace脚本</h3><p>Android 开发环境默认带着retrace脚本,一般情况下路径为./tools/proguard/bin/retrace.sh</p>
+<h3 id="mapping映射表"><a href="#mapping映射表" class="headerlink" title="mapping映射表"></a>mapping映射表</h3><p>Proguard进行混淆之后,会生成一个映射表,文件名为mapping.txt (./app/build/outputs/mapping/release/mapping.txt)</p>
+<h3 id="堆栈还原"><a href="#堆栈还原" class="headerlink" title="堆栈还原"></a>堆栈还原</h3><p>1、将错误堆栈保存成一个文本文件npe_stacktrace.txt</p>
+<p>2、使用命令还原(路径自行修改)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./tools/proguard/bin/retrace.sh   E:/storage/git/github/AjavaSample/apps/build/outputs/mapping/release/mapping.txt /tmp/npe_stacktrace.txt</span><br></pre></td></tr></table></figure>
+<h2 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h2><p>1、《读懂Android中的代码混淆》 <a href="http://blog.csdn.net/qq_35224673/article/details/52038093" target="_blank" rel="external">http://blog.csdn.net/qq_35224673/article/details/52038093</a></p>
+<p>2、《对ProGuard使用方法的思考》 <a href="http://www.jianshu.com/p/14af4a474d55" target="_blank" rel="external">http://www.jianshu.com/p/14af4a474d55</a></p>
+<p>3、《Android项目的代码混淆,Android-Proguard使用说明》 <a href="http://blog.csdn.net/catoop/article/details/47208833" target="_blank" rel="external">http://blog.csdn.net/catoop/article/details/47208833</a></p>
+<p>4、《压缩代码和资源》 <a href="https://developer.android.com/studio/build/shrink-code.html" target="_blank" rel="external">https://developer.android.com/studio/build/shrink-code.html</a></p>
+
       
     </div>
     
@@ -304,7 +409,7 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nodejs/">Nodejs</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/反编译/">反编译</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/打包混淆/">打包混淆</a></li></ul>
 	</div>
 
       
@@ -313,10 +418,6 @@
 	</div>
 
 
-      
-        <p class="article-more-link">
-          <a  href="/posts/github/2016-05-13/say-hexo-to-hello.html#more">阅读全文 >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -340,7 +441,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Ajava攻城师
+    		&copy; 2017 Ajava攻城师
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

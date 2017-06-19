@@ -4,24 +4,84 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Hexo 入门指南（一） - 简介 &amp; 准备 -- Hexo是一个开源的静态博客生成器 | Ajava攻城师的博客</title>
+  <title>Android基础混淆配置说明 | Ajava攻城师的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo是一个开源的静态博客生成器，用node.js开发，作者是台湾大学生tommy351。
-为什么是博客
-对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。">
+  <meta name="description" content="混淆配置说明本文清楚的记录混淆可以适应于哪些元素、分别该如何配置，哪些可以混淆，哪些不需要混淆
+混淆支持的元素类名、包名、方法名、类成员属性、字段\变量名
+哪些不能混淆
+反射需要用到的元素
+
+json需要序列化与反序列化的元素
+
+枚举类型元素
+
+所有的注解
+
+Android四大组件
+
+自定义控件
+
+R和Application
+
+JNI/Native/js调用的方法
+
+第三方开源库
+
+
+常见的混淆配">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 入门指南（一） - 简介 & 准备 -- Hexo是一个开源的静态博客生成器">
-<meta property="og:url" content="http://zengfantian.github.io/posts/github/2016-05-13/hexo-guide-01.html">
+<meta property="og:title" content="Android基础混淆配置说明">
+<meta property="og:url" content="http://zengfantian.github.io/posts/github/2016-05-13/android-proguard-instruction.html">
 <meta property="og:site_name" content="Ajava攻城师的博客">
-<meta property="og:description" content="Hexo是一个开源的静态博客生成器，用node.js开发，作者是台湾大学生tommy351。
-为什么是博客
-对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。">
-<meta property="og:updated_time" content="2016-05-14T11:44:04.581Z">
+<meta property="og:description" content="混淆配置说明本文清楚的记录混淆可以适应于哪些元素、分别该如何配置，哪些可以混淆，哪些不需要混淆
+混淆支持的元素类名、包名、方法名、类成员属性、字段\变量名
+哪些不能混淆
+反射需要用到的元素
+
+json需要序列化与反序列化的元素
+
+枚举类型元素
+
+所有的注解
+
+Android四大组件
+
+自定义控件
+
+R和Application
+
+JNI/Native/js调用的方法
+
+第三方开源库
+
+
+常见的混淆配">
+<meta property="og:updated_time" content="2017-06-19T06:02:48.221Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 入门指南（一） - 简介 & 准备 -- Hexo是一个开源的静态博客生成器">
-<meta name="twitter:description" content="Hexo是一个开源的静态博客生成器，用node.js开发，作者是台湾大学生tommy351。
-为什么是博客
-对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。">
+<meta name="twitter:title" content="Android基础混淆配置说明">
+<meta name="twitter:description" content="混淆配置说明本文清楚的记录混淆可以适应于哪些元素、分别该如何配置，哪些可以混淆，哪些不需要混淆
+混淆支持的元素类名、包名、方法名、类成员属性、字段\变量名
+哪些不能混淆
+反射需要用到的元素
+
+json需要序列化与反序列化的元素
+
+枚举类型元素
+
+所有的注解
+
+Android四大组件
+
+自定义控件
+
+R和Application
+
+JNI/Native/js调用的方法
+
+第三方开源库
+
+
+常见的混淆配">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -209,10 +269,10 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-hexo-guide-01" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-android-proguard-instruction" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/posts/github/2016-05-13/hexo-guide-01.html" class="article-date">
+      <a href="/posts/github/2016-05-13/android-proguard-instruction.html" class="article-date">
   	<time datetime="2016-05-13T09:35:19.000Z" itemprop="datePublished">2016-05-13</time>
 </a>
     </div>
@@ -226,7 +286,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo 入门指南（一） - 简介 &amp; 准备 -- Hexo是一个开源的静态博客生成器
+      Android基础混淆配置说明
     </h1>
   
 
@@ -235,7 +295,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nature/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/反编译/">反编译</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/打包混淆/">打包混淆</a></li></ul>
 	</div>
 
         
@@ -250,34 +310,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Hexo是一个开源的静态博客生成器，用node.js开发，作者是台湾大学生tommy351。</p>
-<p>为什么是博客</p>
-<p>对于个人网站来说，没有比博客更合适的形式了。在博客中，文章才是最主要的，一切都显得主次分明，干净利落。相比之下，论坛中主题和回复鱼龙混杂，阅读体验非常差。同时，博客比论坛的数据库小很多，便于维护。</p>
-<a id="more"></a>
-<p>为什么是静态博客</p>
-<p>很多人选择在虚拟主机或vps上面搭建动态博客。但是这些主机商通常“免费的不稳定，稳定的不免费”。前一段时间，我观察了我的个人博客友链上面的几个站点，一部分在十几天之后就销声匿迹了。独立博客如此麻烦的维护工作，能不能减轻一些呢？正如阮一峰前辈所说，blogger分为三个阶段。最开始，是门户博客。之后，是独立博客。最后，觉得独立博客自己管理起来费劲，便找个别人来管的空间，自己负责写就好。如果我们能够找到这样的空间，在自己保留最大控制权前提下，由别人托管，会省去不少事情。</p>
-<p>静态博客编译之后是纯html页面，优点就是支持它的环境十分好找，例如github、gitcafe、七牛云存储等站点都支持静态页面托管，自然是我们的首选了。由于github page在国内访问较慢，这篇文章用gitcafe做示范。gitcafe是天朝本地化的github，同样提供展示页和域名绑定功能，不需要备案，就是爽。</p>
-<p>但是静态博客并非没有缺点。动态博客更新文章时，脚本是不变的，只需要更新数据库。静态博客要频繁改动文件，不支持增量式上传的东西，比如ftp，就难于管理。此外，还要十分熟悉git各种命令，才能部署页面。</p>
-<p>准备工作</p>
-<p>git<br>node.js<br>markdown编辑器<br>gitcafe<br>域名<br>markdown编辑器是非必须的，只要你熟悉语法，随便一个编辑器来写都不是问题。</p>
-<p>域名也是非必须的，gitcafe pages服务提供免费的二级域名。注册域名的教程这里就不写了。</p>
-<p>安装 git</p>
-<p>git的客户端，本人推荐git-scm。</p>
-<p>linux下面，在bash中键入：</p>
-<p>(Ubuntu, Debian)</p>
-<p>$ sudo apt-get install git<br>(Fedora, Red Hat, CentOS)</p>
-<p>$ sudo yum install git<br>windows或mac下，直接到git-scm官网下载安装。</p>
-<p>安装 node.js</p>
-<p>linux下：</p>
-<p>$ sudo apt-get install nodejs<br>$ sudo apt-get install npm<br>yum同理。</p>
-<p>windows或者mac下，直接到node.js官网下载安装。<br>windows还要设置环境变量，把node.js安装路径写进path里面，用半角分号分隔。</p>
-<p>markdown 编辑器</p>
-<p>windows下推荐markdown pad。</p>
-<p>mac下推荐mou。</p>
-<p>gitcafe</p>
-<p>首先注册一个账号，之后点击查看如何使用pages服务。</p>
-<p>相关网页</p>
-<p>Hexo主页<br>Hexo github 地址<br>git book</p>
+        <h1 id="混淆配置说明"><a href="#混淆配置说明" class="headerlink" title="混淆配置说明"></a>混淆配置说明</h1><p>本文清楚的记录混淆可以适应于哪些元素、分别该如何配置，哪些可以混淆，哪些不需要混淆</p>
+<h2 id="混淆支持的元素"><a href="#混淆支持的元素" class="headerlink" title="混淆支持的元素"></a>混淆支持的元素</h2><p>类名、包名、方法名、类成员属性、字段\变量名</p>
+<h2 id="哪些不能混淆"><a href="#哪些不能混淆" class="headerlink" title="哪些不能混淆"></a>哪些不能混淆</h2><ul>
+<li><p>反射需要用到的元素</p>
+</li>
+<li><p>json需要序列化与反序列化的元素</p>
+</li>
+<li><p>枚举类型元素</p>
+</li>
+<li><p>所有的注解</p>
+</li>
+<li><p>Android四大组件</p>
+</li>
+<li><p>自定义控件</p>
+</li>
+<li><p>R和Application</p>
+</li>
+<li><p>JNI/Native/js调用的方法</p>
+</li>
+<li><p>第三方开源库</p>
+</li>
+</ul>
+<h2 id="常见的混淆配置"><a href="#常见的混淆配置" class="headerlink" title="常见的混淆配置"></a>常见的混淆配置</h2><h3 id="keep"><a href="#keep" class="headerlink" title="-keep"></a>-keep</h3><p>1、保留某个包下面的类以及子包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-keep public class com.droidyue.com.widget.**</span><br></pre></td></tr></table></figure>
+<p>2、保留所有类中使用otto的public方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-keepclassmembers class ** &#123;</span><br><span class="line">    @com.squareup.otto.Subscribe public *;</span><br><span class="line">    @com.squareup.otto.Produce public *;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3、保留Contants类的BOOK_NAME属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-keepclassmembers class com.example.admin.proguardsample.Constants &#123;</span><br><span class="line">     public static java.lang.String BOOK_NAME;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="dontwarn"><a href="#dontwarn" class="headerlink" title="-dontwarn"></a>-dontwarn</h3><p>dontwarn是一个和keep可以说是形影不离,尤其是处理引入的library时.</p>
+<p>引入的library可能存在一些无法找到的引用和其他问题,在build时可能会发出警告,如果我们不进行处理,通常会导致build中止.因此为了保证build继续,我们需要使用dontwarn处理这些我们无法解决的library的警告.</p>
+<p>比如关闭Twitter sdk的警告：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-dontwarn com.twitter.sdk.**</span><br></pre></td></tr></table></figure>
+<h2 id="混淆堆栈错误还原"><a href="#混淆堆栈错误还原" class="headerlink" title="混淆堆栈错误还原"></a>混淆堆栈错误还原</h2><h3 id="retrace脚本"><a href="#retrace脚本" class="headerlink" title="retrace脚本"></a>retrace脚本</h3><p>Android 开发环境默认带着retrace脚本,一般情况下路径为./tools/proguard/bin/retrace.sh</p>
+<h3 id="mapping映射表"><a href="#mapping映射表" class="headerlink" title="mapping映射表"></a>mapping映射表</h3><p>Proguard进行混淆之后,会生成一个映射表,文件名为mapping.txt (./app/build/outputs/mapping/release/mapping.txt)</p>
+<h3 id="堆栈还原"><a href="#堆栈还原" class="headerlink" title="堆栈还原"></a>堆栈还原</h3><p>1、将错误堆栈保存成一个文本文件npe_stacktrace.txt</p>
+<p>2、使用命令还原(路径自行修改)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./tools/proguard/bin/retrace.sh   E:/storage/git/github/AjavaSample/apps/build/outputs/mapping/release/mapping.txt /tmp/npe_stacktrace.txt</span><br></pre></td></tr></table></figure>
+<h2 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h2><p>1、《读懂Android中的代码混淆》 <a href="http://blog.csdn.net/qq_35224673/article/details/52038093" target="_blank" rel="external">http://blog.csdn.net/qq_35224673/article/details/52038093</a></p>
+<p>2、《对ProGuard使用方法的思考》 <a href="http://www.jianshu.com/p/14af4a474d55" target="_blank" rel="external">http://www.jianshu.com/p/14af4a474d55</a></p>
+<p>3、《Android项目的代码混淆,Android-Proguard使用说明》 <a href="http://blog.csdn.net/catoop/article/details/47208833" target="_blank" rel="external">http://blog.csdn.net/catoop/article/details/47208833</a></p>
+<p>4、《压缩代码和资源》 <a href="https://developer.android.com/studio/build/shrink-code.html" target="_blank" rel="external">https://developer.android.com/studio/build/shrink-code.html</a></p>
 
       
     </div>
@@ -287,20 +360,15 @@
     
 <nav id="article-nav">
   
-    <a href="/posts/github/2016-05-13/say-hexo-to-hello.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/posts/github/2016-05-13/hexo-guide-01.html" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Hexo初识
+          Hexo 入门指南（一） - 简介 &amp; 准备 -- Hexo是一个开源的静态博客生成器
         
       </div>
     </a>
   
-  
-    <a href="/posts/github/2016-05-13/android-proguard-instruction.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android基础混淆配置说明</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
   
 </nav>
 
@@ -333,7 +401,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hexo-guide-01" data-title="Hexo 入门指南（一） - 简介 &amp; 准备 -- Hexo是一个开源的静态博客生成器" data-url="http://zengfantian.github.io/posts/github/2016-05-13/hexo-guide-01.html"></div>
+	<div class="ds-thread" data-thread-key="android-proguard-instruction" data-title="Android基础混淆配置说明" data-url="http://zengfantian.github.io/posts/github/2016-05-13/android-proguard-instruction.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
